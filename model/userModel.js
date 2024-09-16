@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  name: { type: String, required: true },
+  // name: { type: String, required: true },
   role: { type: String, enum: ['user']},
   email: { type: String, required: true},
   password: { type:String, required: true},
@@ -12,13 +12,13 @@ const userSchema = new Schema({
   //   email: { type: String, required: true },
   //   address: String,
   // },
-  farmLocation: { type: String, required: true },
-  farmSize: { type: Number, required: true }, // e.g., in acres or hectares
-  crops: [{
-    cropType: { type: String, required: true },
-    areaCultivated: { type: Number, required: true }, // Area for this crop
-    estimatedYield: { type: Number, required: true }, // Estimated yield in tons or kg
-  }],
+  // farmLocation: { type: String, required: true },
+  // farmSize: { type: Number, required: true }, // e.g., in acres or hectares
+  // crops: [{
+  //   cropType: { type: String, required: true },
+  //   areaCultivated: { type: Number, required: true }, // Area for this crop
+  //   estimatedYield: { type: Number, required: true }, // Estimated yield in tons or kg
+  // }],
   // contracts: [{
   //   contractId: { type: Schema.Types.ObjectId, ref: 'Contract' },
   //   buyerId: { type: Schema.Types.ObjectId, ref: 'Buyer', required: true },
@@ -35,11 +35,11 @@ const userSchema = new Schema({
   //   paymentMethod: { type: String, enum: ['bank transfer', 'cash'] },
   //   status: { type: String, enum: ['completed', 'pending'], default: 'pending' },
   // }],
-  equipment: [{
-    equipmentType: { type: String },
-    quantity: { type: Number, default: 1 },
-    condition: { type: String, enum: ['new', 'used', 'needs repair'], default: 'used' },
-  }]
+  // equipment: [{
+  //   equipmentType: { type: String },
+  //   quantity: { type: Number, default: 1 },
+  //   condition: { type: String, enum: ['new', 'used', 'needs repair'], default: 'used' },
+  // }]
 });
 
 // to convert a _id to id for frontend simplicity

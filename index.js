@@ -41,7 +41,7 @@ server.use(
   );
 server.use(express.json());
 
-server.use('/',authRouter.router);
+server.use('/auth',authRouter.router);
 server.use('/users', isAuth(), userRouter.router);
 
 
